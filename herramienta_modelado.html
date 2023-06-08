@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delivery Service - Tu página de entrega a domicilio</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f15a29;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f15a29;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    nav ul li button {
+      background-color: #f15a29;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s;
+    }
+
+    nav ul li button:hover {
+      background-color: #c4461e;
+      box-shadow: none;
+    }
+
+    /* Estilos para los menús desplegables */
+    .submenu {
+      display: none;
+      position: absolute;
+      padding: 10px;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      list-style-type: none;
+      background-color: #fcd7c4;
+    }
+
+    .submenu.active {
+      display: block;
+    }
+
+    .submenu li {
+      margin-bottom: 5px;
+    }
+
+    .submenu li a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: background-color 0.3s;
+    }
+
+    .submenu li a:hover {
+      background-color: #f7bca5;
+    }
+
+    .content {
+      margin: 50px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+	  .content2{
+      margin: 40px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+	  .content3{
+      text-align: center;
+    }
+	  
+	  img.mediana{
+      width: 1000px;
+      height: 600px;
+     }
+  </style>
+  <script>
+	 
+		  
+    function toggleSubmenu(id) {
+      var submenu = document.getElementById(id);
+      submenu.classList.toggle("active");
+
+      // Ocultar los demás menús desplegables
+      var submenus = document.getElementsByClassName("submenu");
+      for (var i = 0; i < submenus.length; i++) {
+        if (submenus[i].id !== id) {
+          submenus[i].classList.remove("active");
+        }
+      }
+    }
+
+	  
+	  document.getElementById('btn-marcot').addEventListener('click', function() {
+    const tituloDestino = document.getElementById('marco-teorico-submenu-content');
+    tituloDestino.scrollIntoView({ behavior: 'smooth' });
+  });
+	  
+	  
+	  
+  </script>
+</head>
+<body>
+  <header>
+	  <img src="image/Logo UMSA.png" width="70" height="143" alt=""/>
+    <h1>BIENVENIDO A NUESTRO SERVICIO DE ENTREGA A DOMICILIO</h1>
+  </header>
+
+  <nav>
+  <ul>
+      <li>
+        <a href="index.html"><button onclick="toggleContent('inicio')">Inicio</button></a>
+      </li>
+		<li>
+        <a href="marcoteorico.html"><button>Marco Teórico</button></a>
+      
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('analisis-submenu')">Paradigmas de Análisis</button>
+        <ul id="analisis-submenu" class="submenu">
+          <li><a href="ciclo_vida_desarrollo.html">Ciclo de Vida de Desarrollo</a></li>
+          <li><a href="analisis_diseño.html">Análisis y Diseño Estructurado</a></li>
+          <li><a href="herramienta_modelado.html">Herramientas de Modelado</a></li>
+        </ul>
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('metodologias-submenu')">Metodología del Desarrollo</button>
+        <ul id="metodologias-submenu" class="submenu">
+          <li><a href="scrum.html">Scrum</a></li>
+        </ul>
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('lenguaje-submenu')">Lenguaje Unificado de Modelo</button>
+        <ul id="lenguaje-submenu" class="submenu">
+          <li><a href="casos_de_uso.html">Casos de uso de Negocio y Sistema</a></li>
+          <li><a href="digrama_clases.html">Diagrama de Clases</a></li>
+        </ul>
+      </li>
+      
+    </ul>
+  </nav>
+
+  <main>
+    
+	 
+    <div id="herramientas-modelado-estructurado" class="content2" >
+		  <h2>Herramientas de Modelado</h2>
+		<h3>Diagrama de Casos de Uso</h3>
+		<p>Un diagrama de casos de uso es una herramienta de modelado utilizada en el análisis y diseño de sistemas para representar las interacciones entre los actores (usuarios, sistemas externos, administradores, etc.) y el sistema en estudio. Proporciona una vista de alto nivel de los diferentes escenarios de uso del sistema y cómo los actores interactúan con él para lograr ciertos objetivos. A continuación, se presenta una descripción de un diagrama de casos de uso:</p>
+
+<p>El diagrama de casos de uso se compone de actores y casos de uso. Los actores son entidades externas que interactúan con el sistema, mientras que los casos de uso representan las diferentes funcionalidades o acciones que pueden realizar los actores dentro del sistema.</p>
+
+<p>Los elementos clave de un diagrama de casos de uso incluyen:</p>
+
+<ul>
+<li><strong>Actores:</strong> Los actores representan los diferentes roles o entidades externas que interactúan con el sistema. Pueden ser personas, otros sistemas, dispositivos o incluso organizaciones. Cada actor se representa mediante un símbolo de palo en el diagrama, y se le asigna un nombre descriptivo. Por ejemplo, en un sistema de delivery, los actores pueden ser clientes, administradores, repartidores, proveedores externos, etc.</li>
+
+<li><strong>Casos de Uso:</strong> Los casos de uso representan las diferentes funcionalidades o acciones que los actores pueden realizar dentro del sistema. Cada caso de uso se representa mediante un óvalo en el diagrama y se le asigna un nombre descriptivo. Los casos de uso describen una interacción específica entre un actor y el sistema para lograr un objetivo concreto. Por ejemplo, en un sistema de delivery, los casos de uso pueden incluir "Realizar Pedido", "Administrar Pedidos", "Realizar Entrega", "Generar Informes", entre otros.</li>
+
+<li><strong>Relaciones:</strong> Las relaciones entre actores y casos de uso se representan mediante líneas de conexión en el diagrama. Estas relaciones pueden indicar diferentes tipos de interacciones, como "asociación", "extensión" o "inclusión". Por ejemplo, una relación de asociación indica que un actor está asociado con uno o varios casos de uso, mientras que una relación de inclusión indica que un caso de uso está incluido en otro caso de uso más amplio.</li>
+</ul>
+
+<p>Además de los elementos mencionados anteriormente, un diagrama de casos de uso puede incluir también:</p>
+
+<ul>
+<li><strong>Generalización:</strong> La generalización se utiliza para representar la relación de herencia entre casos de uso. Esto significa que un caso de uso más específico hereda características y comportamientos de un caso de uso más general. Esta relación se representa mediante una flecha con un triángulo en la punta que apunta al caso de uso general.</li>
+
+<li><strong>Extensiones y puntos de extensión:</strong> Las extensiones se utilizan para representar comportamientos opcionales o alternativos en un caso de uso. Se indican mediante flechas que se ramifican desde el caso de uso principal. Los puntos de extensión son puntos específicos en el flujo del caso de uso donde se puede realizar una extensión.</li>
+
+<li><strong>Inclusión:</strong> La inclusión se utiliza cuando un caso de uso se incluye en otro caso de uso más amplio. Esto significa que el caso de uso incluido es una parte integral del caso de uso principal y se ejecuta en conjunto con él. Se representa mediante una flecha punteada que apunta al caso de uso principal.</li>
+</ul>
+
+<p>Es importante identificar y describir adecuadamente los actores, los casos de uso y las relaciones entre ellos para tener una representación clara y comprensible del sistema.</p>
+		
+		<h3>Diagrama de Clases</h3>
+		
+<p>Un diagrama de clases es una herramienta de modelado utilizada en la programación orientada a objetos (POO) para representar la estructura estática de un sistema. Proporciona una vista detallada de las clases, sus atributos y métodos, así como las relaciones entre ellas. A continuación, se presenta una descripción extensa de un diagrama de clases:</p>
+
+<p>El diagrama de clases se compone de clases, atributos y métodos. Las clases representan entidades o conceptos del sistema y se representan mediante rectángulos divididos en tres compartimentos: el compartimento superior contiene el nombre de la clase, el compartimento del medio contiene los atributos y el compartimento inferior contiene los métodos.</p>
+
+<p>Los elementos clave de un diagrama de clases incluyen:</p>
+
+<ul>
+  <li><strong>Clases:</strong> Las clases son la base del diagrama de clases y representan las entidades principales del sistema. Cada clase tiene un nombre descriptivo que identifica el concepto que representa. Por ejemplo, en un sistema de gestión de biblioteca, las clases pueden ser "Libro", "Usuario" y "Biblioteca". Cada clase puede tener asociados atributos y métodos que describen sus características y comportamiento.</li>
+  <p></p>
+  <li><strong>Atributos:</strong> Los atributos son características o propiedades de una clase. Representan los datos que una clase puede almacenar. Los atributos se describen mediante su nombre y su tipo de dato. Por ejemplo, la clase "Libro" puede tener atributos como "título", "autor" y "año de publicación". Los atributos pueden ser públicos (representados con el símbolo "+"), privados (representados con el símbolo "-") o protegidos (representados con el símbolo "#").</li>
+  <p></p>
+  <li><strong>Métodos:</strong> Los métodos representan las acciones o comportamientos que una clase puede realizar. Son las operaciones que se pueden realizar sobre los atributos de una clase. Los métodos se describen mediante su nombre, los parámetros que aceptan y el tipo de dato que devuelven. Por ejemplo, la clase "Libro" puede tener métodos como "prestarLibro()", "devolverLibro()" y "obtenerDisponibilidad()". Los métodos pueden ser públicos, privados o protegidos, al igual que los atributos.</li>
+  <p></p>
+  <li><strong>Relaciones:</strong> Las relaciones entre las clases se representan mediante líneas de conexión en el diagrama de clases. Estas relaciones indican cómo las clases se relacionan entre sí y se dividen en diferentes tipos:</li>
+	<p></p>
+    <ul>
+      <li><strong>Asociación:</strong> La asociación representa una relación estructural entre dos o más clases. Indica que una clase está asociada con otra clase y puede utilizar sus atributos y métodos. Se representa con una línea sólida que conecta las clases involucradas. Puede tener una dirección y una multiplicidad, que indica la cantidad de instancias de una clase que pueden estar asociadas con instancias de la otra clase.</li>
+      <p></p>
+      <li><strong>Agregación:</strong> La agregación es una relación de tipo "todo-parte" entre clases. Indica que una clase es un conjunto o contenedor de instancias de otra clase. Se representa con una línea sólida con un rombo vacío en el extremo del lado del contenedor. La multiplicidad en la agregación indica la cantidad de instancias de la clase "parte" que pueden estar contenidas en la clase "todo".</li>
+      <p></p>
+      <li><strong>Composición:</strong> La composición es una relación de tipo "todo-parte" similar a la agregación, pero más fuerte. Indica que una clase está compuesta por instancias de otra clase</li>
+    </ul>
+</ul>
+
+<p>En resumen, un diagrama de clases es una herramienta de modelado que representa la estructura estática de un sistema orientado a objetos. Permite visualizar las clases, sus atributos, métodos y relaciones entre ellas. Al utilizar etiquetas HTML, es posible organizar y resaltar los diferentes elementos del diagrama para una mejor comprensión.</p>
+
+	  </div>
+   
+  </main>
+	
+  <footer>
+    <p>Derechos de autor &copy; 2023 </p>
+  </footer>
+</body>
+</html>
+

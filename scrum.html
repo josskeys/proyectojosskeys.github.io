@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delivery Service - Tu página de entrega a domicilio</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f15a29;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f15a29;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    nav ul li button {
+      background-color: #f15a29;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s;
+    }
+
+    nav ul li button:hover {
+      background-color: #c4461e;
+      box-shadow: none;
+    }
+
+    /* Estilos para los menús desplegables */
+    .submenu {
+      display: none;
+      position: absolute;
+      padding: 10px;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      list-style-type: none;
+      background-color: #fcd7c4;
+    }
+
+    .submenu.active {
+      display: block;
+    }
+
+    .submenu li {
+      margin-bottom: 5px;
+    }
+
+    .submenu li a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: background-color 0.3s;
+    }
+
+    .submenu li a:hover {
+      background-color: #f7bca5;
+    }
+
+    .content {
+      margin: 50px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+	  .content2{
+      margin: 40px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+	  .content3{
+      text-align: center;
+    }
+	  
+	  img.mediana{
+      width: 1000px;
+      height: 600px;
+     }
+  </style>
+  <script>
+	 
+		  
+    function toggleSubmenu(id) {
+      var submenu = document.getElementById(id);
+      submenu.classList.toggle("active");
+
+      // Ocultar los demás menús desplegables
+      var submenus = document.getElementsByClassName("submenu");
+      for (var i = 0; i < submenus.length; i++) {
+        if (submenus[i].id !== id) {
+          submenus[i].classList.remove("active");
+        }
+      }
+    }
+
+	  
+	  document.getElementById('btn-marcot').addEventListener('click', function() {
+    const tituloDestino = document.getElementById('marco-teorico-submenu-content');
+    tituloDestino.scrollIntoView({ behavior: 'smooth' });
+  });
+	  
+	  
+	  
+  </script>
+</head>
+<body>
+  <header>
+	  <img src="image/Logo UMSA.png" width="70" height="143" alt=""/>
+    <h1>BIENVENIDO A NUESTRO SERVICIO DE ENTREGA A DOMICILIO</h1>
+  </header>
+
+  <nav>
+   <ul>
+      <li>
+        <a href="index.html"><button onclick="toggleContent('inicio')">Inicio</button></a>
+      </li>
+		<li>
+        <a href="marcoteorico.html"><button>Marco Teórico</button></a>
+      
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('analisis-submenu')">Paradigmas de Análisis</button>
+        <ul id="analisis-submenu" class="submenu">
+          <li><a href="ciclo_vida_desarrollo.html">Ciclo de Vida de Desarrollo</a></li>
+          <li><a href="analisis_diseño.html">Análisis y Diseño Estructurado</a></li>
+          <li><a href="herramienta_modelado.html">Herramientas de Modelado</a></li>
+        </ul>
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('metodologias-submenu')">Metodología del Desarrollo</button>
+        <ul id="metodologias-submenu" class="submenu">
+          <li><a href="scrum.html">Scrum</a></li>
+        </ul>
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('lenguaje-submenu')">Lenguaje Unificado de Modelo</button>
+        <ul id="lenguaje-submenu" class="submenu">
+          <li><a href="casos_de_uso.html">Casos de uso de Negocio y Sistema</a></li>
+          <li><a href="digrama_clases.html">Diagrama de Clases</a></li>
+        </ul>
+      </li>
+      
+    </ul>
+  </nav>
+
+  <main>
+    
+	  
+    <div id="metodologias-submenu-content" class="content2" >
+      <h2>Metodología del Desarrollo</h2>
+      <p><strong>Qué es SCRUM</strong></p>
+<p>Scrum es un proceso en el que se aplican de manera regular un conjunto de buenas prácticas para trabajar colaborativamente, en equipo, y obtener el mejor resultado posible de un proyecto. Estas prácticas se apoyan unas a otras y su selección tiene origen en un estudio de la manera de trabajar de equipos altamente productivos.</p>
+
+<p>En Scrum se realizan entregas parciales y regulares del producto final, priorizadas por el beneficio que aportan al receptor del proyecto. Por ello, Scrum está especialmente indicado para proyectos en entornos complejos, donde se necesita obtener resultados pronto, donde los requisitos son cambiantes o poco definidos, donde la innovación, la competitividad, la flexibilidad y la productividad son fundamentales.</p>
+
+<p>Scrum también se utiliza para resolver situaciones en que no se está entregando al cliente lo que necesita, cuando las entregas se alargan demasiado, los costes se disparan o la calidad no es aceptable, cuando se necesita capacidad de reacción ante la competencia, cuando la moral de los equipos es baja y la rotación alta, cuando es necesario identificar y solucionar ineficiencias sistemáticamente o cuando se quiere trabajar utilizando un proceso especializado en el desarrollo de producto.</p>
+
+<p><strong>El proceso</strong></p>
+<p>En Scrum un proyecto se ejecuta en ciclos temporales cortos y de duración fija (iteraciones que normalmente son de 2 semanas, aunque en algunos equipos son de 3 y hasta 4 semanas, límite máximo de feedback de producto real y reflexión). Cada iteración tiene que proporcionar un resultado completo, un incremento de producto final que sea susceptible de ser entregado con el mínimo esfuerzo al cliente cuando lo solicite.</p>
+
+<p>El proceso parte de la lista de objetivos/requisitos priorizada del producto, que actúa como plan del proyecto. En esta lista el cliente (Product Owner) prioriza los objetivos balanceando el valor que le aportan respecto a su coste (que el equipo estima considerando la Definición de Hecho) y quedan repartidos en iteraciones y entregas.</p>
+
+<p>Las actividades que se llevan a cabo en Scrum son las siguientes (los tiempos indicados son para iteraciones de 2 semanas):</p>
+
+<ul>
+  <li><strong>Planificación de la iteración:</strong> El primer día de la iteración se realiza la reunión de planificación de la iteración. Tiene dos partes:</li>
+  <ol>
+    <li><strong>Selección de requisitos (2 horas):</strong> El cliente presenta al equipo la lista de requisitos priorizada del producto o proyecto. El equipo pregunta al cliente las dudas que surgen y selecciona los requisitos más prioritarios que prevé que podrá completar en la iteración, de manera que puedan ser entregados si el cliente lo solicita.</li>
+    <li><strong>Planificación de la iteración (2 horas):</strong> El equipo elabora la lista de tareas de la iteración necesarias para desarrollar los requisitos seleccionados. La estimación de esfuerzo se hace de manera conjunta y los miembros del equipo se autoasignan las tareas, se autoorganizan para trabajar incluso en parejas (o grupos mayores) con el fin de compartir conocimiento (creando un equipo más resiliente) o para resolver juntos objetivos especialmente complejos.</li>
+  </ol>
+  
+  <li><strong>Ejecución de la iteración:</strong> Cada día el equipo realiza una reunión de sincronización (15 minutos), normalmente delante de un tablero físico o pizarra (Scrum Taskboard). El equipo inspecciona el trabajo que el resto está realizando (dependencias entre tareas, progreso hacia el objetivo de la iteración, obstáculos que pueden impedir este objetivo) para poder hacer las adaptaciones necesarias que permitan cumplir con la previsión de objetivos a mostrar al final de la iteración. En la reunión cada miembro del equipo responde a tres preguntas:</li>
+  <ul>
+    <li>¿Qué he hecho desde la última reunión de sincronización para ayudar al equipo a cumplir su objetivo?</li>
+    <li>¿Qué voy a hacer a partir de este momento para ayudar al equipo a cumplir su objetivo?</li>
+    <li>¿Qué impedimentos tengo o voy a tener que nos impidan conseguir nuestro objetivo?</li>
+  </ul>
+  <p>Durante la iteración el Facilitador (Scrum Master) se encarga de que el equipo pueda mantener el foco para cumplir con sus objetivos.</p>
+  <ul>
+    <li>Elimina los obstáculos que el equipo no puede resolver por sí mismo.</li>
+    <li>Protege al equipo de interrupciones externas que puedan afectar el objetivo de la iteración o su productividad.</li>
+  </ul>
+  <p>Durante la iteración, el cliente junto con el equipo refinan la lista de requisitos (para prepararlos para las siguientes iteraciones) y, si es necesario, cambian o replanifican los objetivos del proyecto (10%-15% del tiempo de la iteración) con el objetivo de maximizar la utilidad de lo que se desarrolla y el retorno de inversión.</p>
+  
+  <li><strong>Inspección y adaptación:</strong> El último día de la iteración se realiza la reunión de revisión de la iteración. Tiene dos partes:</li>
+  <ol>
+    <li><strong>Revisión (demostración) (1,5 horas):</strong> El equipo presenta al cliente los requisitos completados en la iteración, en forma de incremento de producto preparado para ser entregado con el mínimo esfuerzo. En función de los resultados mostrados y de los cambios que haya habido en el contexto del proyecto, el cliente puede realizar las adaptaciones necesarias de manera objetiva, ya desde la primera iteración, replanificando el proyecto.</li>
+    <li><strong>Retrospectiva (1,5 horas):</strong> El equipo analiza cómo ha sido su manera de trabajar y cuáles son los problemas que podrían impedirle progresar adecuadamente, mejorando de manera continua su productividad. El Facilitador se encargará de eliminar o escalar los obstáculos identificados que estén más allá del ámbito de acción del equipo.</li>
+  </ol>
+</ul>
+
+    </div>
+
+    
+	
+	  
+  </main>
+	
+  <footer>
+    <p>Derechos de autor &copy; 2023 </p>
+  </footer>
+</body>
+</html>
+

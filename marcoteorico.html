@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delivery Service - Tu página de entrega a domicilio</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f15a29;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f15a29;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    nav ul li button {
+      background-color: #f15a29;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s;
+    }
+
+    nav ul li button:hover {
+      background-color: #c4461e;
+      box-shadow: none;
+    }
+
+    /* Estilos para los menús desplegables */
+    .submenu {
+      display: none;
+      position: absolute;
+      padding: 10px;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      list-style-type: none;
+      background-color: #fcd7c4;
+    }
+
+    .submenu.active {
+      display: block;
+    }
+
+    .submenu li {
+      margin-bottom: 5px;
+    }
+
+    .submenu li a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: background-color 0.3s;
+    }
+
+    .submenu li a:hover {
+      background-color: #f7bca5;
+    }
+
+    .content {
+      margin: 50px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+	  .content2{
+      margin: 40px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+	  .content3{
+      text-align: center;
+    }
+	  
+	  img.mediana{
+      width: 1000px;
+      height: 600px;
+     }
+  </style>
+  <script>
+	 
+		  
+    function toggleSubmenu(id) {
+      var submenu = document.getElementById(id);
+      submenu.classList.toggle("active");
+
+      // Ocultar los demás menús desplegables
+      var submenus = document.getElementsByClassName("submenu");
+      for (var i = 0; i < submenus.length; i++) {
+        if (submenus[i].id !== id) {
+          submenus[i].classList.remove("active");
+        }
+      }
+    }
+
+	  
+	  document.getElementById('btn-marcot').addEventListener('click', function() {
+    const tituloDestino = document.getElementById('marco-teorico-submenu-content');
+    tituloDestino.scrollIntoView({ behavior: 'smooth' });
+  });
+	  
+	  
+	  
+  </script>
+</head>
+<body>
+  <header>
+	  <img src="image/Logo UMSA.png" width="70" height="143" alt=""/>
+    <h1>BIENVENIDO A NUESTRO SERVICIO DE ENTREGA A DOMICILIO</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html"><button onclick="toggleContent('inicio')">Inicio</button></a>
+      </li>
+		<li>
+        <a href="marcoteorico.html"><button>Marco Teórico</button></a>
+      
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('analisis-submenu')">Paradigmas de Análisis</button>
+        <ul id="analisis-submenu" class="submenu">
+          <li><a href="ciclo_vida_desarrollo.html">Ciclo de Vida de Desarrollo</a></li>
+          <li><a href="analisis_diseño.html">Análisis y Diseño Estructurado</a></li>
+          <li><a href="herramienta_modelado.html">Herramientas de Modelado</a></li>
+        </ul>
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('metodologias-submenu')">Metodología del Desarrollo</button>
+        <ul id="metodologias-submenu" class="submenu">
+          <li><a href="scrum.html">Scrum</a></li>
+        </ul>
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('lenguaje-submenu')">Lenguaje Unificado de Modelo</button>
+        <ul id="lenguaje-submenu" class="submenu">
+          <li><a href="casos_de_uso.html">Casos de uso de Negocio y Sistema</a></li>
+          <li><a href="digrama_clases.html">Diagrama de Clases</a></li>
+        </ul>
+      </li>
+      
+    </ul>
+  </nav>
+
+  <main>
+    
+	  <div id="marco-teorico-submenu-content" class="content2">
+      <h2>Marco Teórico</h2>
+<h2>1. Introducción</h2>
+<p>La creación de un sistema de delivery, también conocido como sistema de entrega a domicilio, es una tarea que implica la planificación y desarrollo de un conjunto de procesos y tecnologías para permitir la entrega de productos o servicios directamente al cliente en su ubicación deseada.</p>
+<p>En los últimos años, el sector del delivery ha experimentado un crecimiento significativo debido al aumento de la demanda de los consumidores que buscan comodidad y conveniencia al adquirir productos o solicitar servicios. Empresas de diferentes industrias, como restaurantes, tiendas minoristas, supermercados, farmacias y más, han adoptado los sistemas de delivery para satisfacer las necesidades de sus clientes y mantenerse competitivas en el mercado.</p>
+<p>El objetivo principal de un sistema de delivery es optimizar y agilizar el proceso de entrega, garantizando una experiencia positiva para el cliente y maximizando la eficiencia operativa de la empresa. Para lograrlo, se requiere un enfoque integral que abarque diferentes aspectos, como la gestión de pedidos, la logística de entrega, la comunicación con los clientes y la coordinación entre los diferentes actores involucrados en el proceso.</p>
+
+<h2>2. Objetivos Generales</h2>
+<ul>
+  <li><strong>Mejorar la experiencia del cliente:</strong>Uno de los objetivos principales de un sistema de delivery es brindar una experiencia positiva y conveniente a los clientes. Esto implica agilizar el proceso de pedido, ofrecer opciones de entrega flexibles, proporcionar información actualizada sobre el estado del pedido y garantizar la calidad y precisión de las entregas.</li>
+	<p></p>
+	<li><strong>Aumentar la eficiencia operativa:</strong>Un sistema de delivery eficiente puede ayudar a optimizar los procesos internos de una empresa, desde la recepción de pedidos hasta la entrega final. El objetivo es reducir los tiempos de espera, minimizar los errores y maximizar la productividad de los repartidores o conductores.</li>
+	<p></p>
+	<li><strong>Ampliar el alcance geográfico:</strong>Un sistema de delivery puede permitirle a una empresa expandir su alcance geográfico y llegar a clientes que de otra manera serían inaccesibles. Esto puede generar nuevas oportunidades de negocio y aumentar la base de clientes.</li>
+	<p></p>
+	<li><strong>Incrementar la fidelidad de los clientes:</strong>Al ofrecer un servicio de entrega confiable y conveniente, se puede fomentar la lealtad de los clientes existentes. Un sistema de delivery bien implementado puede convertirse en un factor diferenciador y en una ventaja competitiva.</li>
+	<p></p>
+	<li><strong>Optimizar la gestión de inventario:</strong>Un sistema de delivery efectivo puede ayudar a una empresa a gestionar su inventario de manera más eficiente. Al recibir pedidos en tiempo real y realizar un seguimiento preciso de las entregas, se pueden evitar problemas como el exceso de stock o la falta de productos.</li>
+	<p></p>
+	<li><strong>Recopilar datos y generar insights:</strong>La implementación de un sistema de delivery permite recopilar datos valiosos sobre los hábitos de compra de los clientes, los tiempos de entrega, las preferencias de productos, entre otros. Estos datos pueden utilizarse para obtener insights y tomar decisiones informadas sobre estrategias de marketing, expansión del negocio y mejoras en el servicio.</li>
+	<p></p>
+	<li><strong>Adaptarse a las tendencias del mercado:</strong>El sector del delivery está en constante evolución, impulsado por las demandas cambiantes de los consumidores y las innovaciones tecnológicas. Un objetivo importante es mantenerse actualizado y adaptarse a las tendencias emergentes, como la entrega en el mismo día, la entrega programada o el uso de drones y vehículos autónomos.</li>
+</ul>
+
+<h2>3. Objetivos Específicos</h2>
+<ul>
+	<li><strong>Automatizar el proceso de pedidos:</strong>Implementar un sistema de delivery que permita a los clientes realizar pedidos de manera rápida y sencilla a través de una plataforma en línea o una aplicación móvil, reduciendo la dependencia de llamadas telefónicas o pedidos presenciales.</li>
+	<p></p>
+	<li><strong>Optimizar la gestión de rutas de entrega:</strong>Utilizar algoritmos y tecnología de geolocalización para planificar y optimizar las rutas de entrega, minimizando los tiempos de desplazamiento y reduciendo los costos operativos.</li>
+	<p></p>
+  <li><strong>Mejorar la visibilidad del proceso de entrega:</strong>Proporcionar a los clientes información en tiempo real sobre el estado de sus pedidos, como la confirmación de recepción, la ubicación del repartidor y el tiempo estimado de entrega.</li>
+	<p></p>
+  <li><strong>Establecer políticas de tiempo de entrega:</strong>Definir y cumplir tiempos de entrega específicos para distintas áreas geográficas, garantizando la puntualidad y confiabilidad del servicio</li>
+	<p></p>
+  <li><strong>Implementar un sistema de seguimiento de inventario:</strong>Desarrollar un sistema que permita llevar un control preciso del inventario disponible, facilitando la gestión de productos y evitando problemas como la falta de stock o la caducidad de productos</li>
+	<p></p>
+  <li><strong>Establecer estándares de calidad en la entrega:</strong>Definir protocolos y procedimientos para garantizar que las entregas se realicen de manera segura, higiénica y sin daños a los productos, manteniendo altos estándares de calidad en el servicio.</li>
+	<p></p>
+  <li><strong>Integrar métodos de pago electrónicos:</strong>Facilitar a los clientes la realización de pagos en línea o mediante aplicaciones móviles, ofreciendo diversas opciones de pago electrónico y minimizando el uso de efectivo.</li>
+	<p></p>
+  <li><strong>Implementar un sistema de retroalimentación y reseñas:</strong>Permitir a los clientes proporcionar comentarios y reseñas sobre el servicio de delivery, con el objetivo de evaluar y mejorar continuamente la calidad del servicio.</li>
+	<p></p>
+  <li><strong>Establecer alianzas estratégicas con restaurantes u otros negocios:</strong>Establecer acuerdos y alianzas con establecimientos locales para ofrecer una amplia variedad de opciones de comida u otros productos a los clientes, ampliando así el catálogo de servicios ofrecidos.</li>
+	<p></p>
+  <li><strong>Monitorear y analizar métricas de desempeño:</strong>Implementar sistemas de seguimiento y análisis de métricas clave, como el tiempo de entrega promedio, la satisfacción del cliente, los costos operativos y el crecimiento del negocio, con el fin de evaluar el desempeño del sistema de delivery y tomar decisiones informadas para mejorarlo.</li>
+</ul>
+
+<h2>4. Conclusiones</h2>
+<ol>
+  <li>Mejora de la eficiencia operativa</li>
+  <li>Aumento de la satisfacción del cliente</li>
+  <li>Ampliación del alcance del negocio</li>
+  <li>Adaptación a las demandas del mercado</li>
+  <li>Mayor capacidad de análisis y toma de decisiones</li>
+  <li>Adaptabilidad a situaciones adversas</li>
+		  </ol>
+    </div>
+
+
+  </main>
+	
+  <footer>
+    <p>Derechos de autor &copy; 2023 </p>
+  </footer>
+</body>
+</html>
+

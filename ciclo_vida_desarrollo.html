@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delivery Service - Tu página de entrega a domicilio</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f15a29;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f15a29;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    nav ul li button {
+      background-color: #f15a29;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s;
+    }
+
+    nav ul li button:hover {
+      background-color: #c4461e;
+      box-shadow: none;
+    }
+
+    /* Estilos para los menús desplegables */
+    .submenu {
+      display: none;
+      position: absolute;
+      padding: 10px;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      list-style-type: none;
+      background-color: #fcd7c4;
+    }
+
+    .submenu.active {
+      display: block;
+    }
+
+    .submenu li {
+      margin-bottom: 5px;
+    }
+
+    .submenu li a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: background-color 0.3s;
+    }
+
+    .submenu li a:hover {
+      background-color: #f7bca5;
+    }
+
+    .content {
+      margin: 50px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+	  .content2{
+      margin: 40px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+	  .content3{
+      text-align: center;
+    }
+	  
+	  img.mediana{
+      width: 1000px;
+      height: 600px;
+     }
+  </style>
+  <script>
+	 
+		  
+    function toggleSubmenu(id) {
+      var submenu = document.getElementById(id);
+      submenu.classList.toggle("active");
+
+      // Ocultar los demás menús desplegables
+      var submenus = document.getElementsByClassName("submenu");
+      for (var i = 0; i < submenus.length; i++) {
+        if (submenus[i].id !== id) {
+          submenus[i].classList.remove("active");
+        }
+      }
+    }
+
+	  
+	  document.getElementById('btn-marcot').addEventListener('click', function() {
+    const tituloDestino = document.getElementById('marco-teorico-submenu-content');
+    tituloDestino.scrollIntoView({ behavior: 'smooth' });
+  });
+	  
+	  
+	  
+  </script>
+</head>
+<body>
+  <header>
+	  <img src="image/Logo UMSA.png" width="70" height="143" alt=""/>
+    <h1>BIENVENIDO A NUESTRO SERVICIO DE ENTREGA A DOMICILIO</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html"><button onclick="toggleContent('inicio')">Inicio</button></a>
+      </li>
+		<li>
+        <a href="marcoteorico.html"><button>Marco Teórico</button></a>
+      
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('analisis-submenu')">Paradigmas de Análisis</button>
+        <ul id="analisis-submenu" class="submenu">
+          <li><a href="ciclo_vida_desarrollo.html">Ciclo de Vida de Desarrollo</a></li>
+          <li><a href="analisis_diseño.html">Análisis y Diseño Estructurado</a></li>
+          <li><a href="herramienta_modelado.html">Herramientas de Modelado</a></li>
+        </ul>
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('metodologias-submenu')">Metodología del Desarrollo</button>
+        <ul id="metodologias-submenu" class="submenu">
+          <li><a href="scrum.html">Scrum</a></li>
+        </ul>
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('lenguaje-submenu')">Lenguaje Unificado de Modelo</button>
+        <ul id="lenguaje-submenu" class="submenu">
+          <li><a href="casos_de_uso.html">Casos de uso de Negocio y Sistema</a></li>
+          <li><a href="digrama_clases.html">Diagrama de Clases</a></li>
+        </ul>
+      </li>
+      
+    </ul>
+  </nav>
+
+  <main>
+   
+
+    <div id="ciclo-vida-desarrollo-content" class="content2">
+      <h2>Ciclo de Vida de Desarrollo</h2>
+      <p>Me complace presentarle el informe sobre el ciclo de vida del desarrollo de un sistema de entrega utilizando la metodología Scrum describiremos cómo se puede adaptar el proceso de desarrollo a la metodología ágil Scrum para mejorar la eficiencia y la calidad del proyecto.El objetivo es proporcionar una visión general del ciclo de vida del desarrollo de un sistema de entrega y cómo se puede aplicar la metodología Scrum en cada etapa del proceso. Scrum es un marco de trabajo ágil que permite un enfoque colaborativo, iterativo e incremental en el desarrollo de software.</p>
+
+  <h2>I. Desarrollo</h2>
+
+  <h3>Planificación del sprint:</h3>
+  <p>En lugar de una planificación inicial exhaustiva, se lleva a cabo una planificación de sprint donde el equipo de desarrollo y el propietario del producto colaboran para seleccionar y priorizar las funcionalidades que se abordarán en el próximo sprint. Se establecerán objetivos claros y se definirá el alcance del sprint.</p>
+
+  <h3>Sprint 0 (opcional):</h3>
+  <p>En algunos casos, se puede realizar un sprint 0 para establecer las bases del proyecto, como la configuración del entorno de desarrollo, la creación del backlog del producto y la definición de las historias de usuario iniciales. Esto sienta las bases para el inicio del desarrollo.</p>
+
+  <h3>Sprint:</h3>
+  <p>Se inicia un sprint, que es un período de tiempo fijo (por ejemplo, 2-4 semanas) durante el cual el equipo de desarrollo trabaja para completar las tareas y funcionalidades seleccionadas para ese sprint. Se lleva a cabo una planificación detallada del trabajo a realizar durante el sprint.</p>
+
+  <h3>Reuniones diarias (Daily Scrum):</h3>
+  <p>Todos los días, el equipo se reúne ocasionalmente para compartir el progreso, las actualizaciones y los posibles obstáculos. Estas reuniones diarias permiten mantener a todos los miembros del equipo en el mismo camino y facilitan la identificación temprana de problemas y la toma de decisiones rápidas.</p>
+
+  <h3>Desarrollo iterativo e incrementos:</h3>
+  <p>Durante cada sprint, el equipo trabaja en desarrollar funcionalidades incrementales y operativas del sistema de entrega. Se enfoca en crear entregables funcionales y potencialmente desplegables al final de cada sprint. Esto permite obtener un sistema en funcionamiento de manera gradual y continua.</p>
+
+  <h3>Revisión del sprint:</h3>
+  <p>Al finalizar cada sprint, se lleva a cabo una reunión de revisión del sprint donde se muestra el incremento desarrollado al propietario del producto y otros interesados. Se recopilan comentarios y se realizan ajustes en el backlog del producto en función de esas observaciones. Esto asegura una retroalimentación constante y permite realizar mejoras continuas.</p>
+
+  <h3>Retrospectiva del sprint:</h3>
+  <p>También al finalizar cada sprint, el equipo realiza una retrospectiva para analizar qué está bien, qué se puede mejorar y cómo se puede optimizar el proceso. Se definen acciones y se realizan ajustes para aumentar la eficiencia y la calidad en los siguientes sprints. Esto fomenta la mejora continua del equipo y el proceso de desarrollo.</p>
+
+  <h3>Repetición:</h3>
+  <p>El ciclo se repite para cada sprint subsiguiente, seleccionando nuevas funcionalidades del backlog del producto en función de las prioridades y los objetivos del proyecto. Se continúa iterando y entregando incrementos funcionales hasta alcanzar la meta establecida para el sistema de entrega.</p>
+
+  <h2>II. Conclusiones:</h2>
+  <p>La aplicación de la metodología Scrum en el ciclo de vida del desarrollo de un sistema de entrega proporciona una serie de beneficios, como una mayor adaptabilidad a los cambios, una mayor transparencia en el progreso del proyecto y una entrega incremental de valor. La colaboración constante entre el equipo de desarrollo y el propietario del producto permite obtener resultados satisfactorios y ajustar el producto en función de los comentarios y necesidades del cliente.</p>
+
+  <h2>III. Recomendaciones:</h2>
+  <p>Para garantizar el éxito del desarrollo del sistema de entrega con Scrum, se recomienda mantener una comunicación clara y continua entre todos los miembros del equipo, seguir las prácticas ágiles de Scrum de manera adecuada y utilizar herramientas colaborativas para el seguimiento y la gestión del proyecto.</p>
+    </div>
+	 
+
+  </main>
+	
+  <footer>
+    <p>Derechos de autor &copy; 2023 </p>
+  </footer>
+</body>
+</html>
+

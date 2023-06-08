@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delivery Service - Tu página de entrega a domicilio</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f15a29;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f15a29;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    nav ul li button {
+      background-color: #f15a29;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s;
+    }
+
+    nav ul li button:hover {
+      background-color: #c4461e;
+      box-shadow: none;
+    }
+
+    /* Estilos para los menús desplegables */
+    .submenu {
+      display: none;
+      position: absolute;
+      padding: 10px;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      list-style-type: none;
+      background-color: #fcd7c4;
+    }
+
+    .submenu.active {
+      display: block;
+    }
+
+    .submenu li {
+      margin-bottom: 5px;
+    }
+
+    .submenu li a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: background-color 0.3s;
+    }
+
+    .submenu li a:hover {
+      background-color: #f7bca5;
+    }
+
+    .content {
+      margin: 50px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+	  .content2{
+      margin: 40px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+	  .content3{
+      text-align: center;
+    }
+	  
+	  img.mediana{
+      width: 1000px;
+      height: 600px;
+     }
+  </style>
+  <script>
+	 
+		  
+    function toggleSubmenu(id) {
+      var submenu = document.getElementById(id);
+      submenu.classList.toggle("active");
+
+      // Ocultar los demás menús desplegables
+      var submenus = document.getElementsByClassName("submenu");
+      for (var i = 0; i < submenus.length; i++) {
+        if (submenus[i].id !== id) {
+          submenus[i].classList.remove("active");
+        }
+      }
+    }
+
+	  
+	  document.getElementById('btn-marcot').addEventListener('click', function() {
+    const tituloDestino = document.getElementById('marco-teorico-submenu-content');
+    tituloDestino.scrollIntoView({ behavior: 'smooth' });
+  });
+	  
+	  
+	  
+  </script>
+</head>
+<body>
+  <header>
+	  <img src="image/Logo UMSA.png" width="70" height="143" alt=""/>
+    <h1>BIENVENIDO A NUESTRO SERVICIO DE ENTREGA A DOMICILIO</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html"><button onclick="toggleContent('inicio')">Inicio</button></a>
+      </li>
+		<li>
+        <a href="marcoteorico.html"><button>Marco Teórico</button></a>
+      
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('analisis-submenu')">Paradigmas de Análisis</button>
+        <ul id="analisis-submenu" class="submenu">
+          <li><a href="ciclo_vida_desarrollo.html">Ciclo de Vida de Desarrollo</a></li>
+          <li><a href="analisis_diseño.html">Análisis y Diseño Estructurado</a></li>
+          <li><a href="herramienta_modelado.html">Herramientas de Modelado</a></li>
+        </ul>
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('metodologias-submenu')">Metodología del Desarrollo</button>
+        <ul id="metodologias-submenu" class="submenu">
+          <li><a href="scrum.html">Scrum</a></li>
+        </ul>
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('lenguaje-submenu')">Lenguaje Unificado de Modelo</button>
+        <ul id="lenguaje-submenu" class="submenu">
+          <li><a href="casos_de_uso.html">Casos de uso de Negocio y Sistema</a></li>
+          <li><a href="digrama_clases.html">Diagrama de Clases</a></li>
+        </ul>
+      </li>
+      
+    </ul>
+  </nav>
+
+  <main>
+    <div id="inicio-content" class="content2">
+      <h2>Inicio</h2>
+      <p>
+        Nombre: Jose Daniel Condori Choque<br>
+		CI: 13277399LP<br>
+        Materia: INF-162<br>
+        Gestión: 2023
+      </p>
+    </div>
+	  
+  </main>
+	
+  <footer>
+    <p>Derechos de autor &copy; 2023 </p>
+  </footer>
+</body>
+</html>
+

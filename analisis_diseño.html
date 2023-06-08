@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delivery Service - Tu página de entrega a domicilio</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f15a29;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f15a29;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    nav ul li button {
+      background-color: #f15a29;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s;
+    }
+
+    nav ul li button:hover {
+      background-color: #c4461e;
+      box-shadow: none;
+    }
+
+    /* Estilos para los menús desplegables */
+    .submenu {
+      display: none;
+      position: absolute;
+      padding: 10px;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      list-style-type: none;
+      background-color: #fcd7c4;
+    }
+
+    .submenu.active {
+      display: block;
+    }
+
+    .submenu li {
+      margin-bottom: 5px;
+    }
+
+    .submenu li a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: background-color 0.3s;
+    }
+
+    .submenu li a:hover {
+      background-color: #f7bca5;
+    }
+
+    .content {
+      margin: 50px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+	  .content2{
+      margin: 40px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+	  .content3{
+      text-align: center;
+    }
+	  
+	  img.mediana{
+      width: 1000px;
+      height: 600px;
+     }
+  </style>
+  <script>
+	 
+		  
+    function toggleSubmenu(id) {
+      var submenu = document.getElementById(id);
+      submenu.classList.toggle("active");
+
+      // Ocultar los demás menús desplegables
+      var submenus = document.getElementsByClassName("submenu");
+      for (var i = 0; i < submenus.length; i++) {
+        if (submenus[i].id !== id) {
+          submenus[i].classList.remove("active");
+        }
+      }
+    }
+
+	  
+	  document.getElementById('btn-marcot').addEventListener('click', function() {
+    const tituloDestino = document.getElementById('marco-teorico-submenu-content');
+    tituloDestino.scrollIntoView({ behavior: 'smooth' });
+  });
+	  
+	  
+	  
+  </script>
+</head>
+<body>
+  <header>
+	  <img src="image/Logo UMSA.png" width="70" height="143" alt=""/>
+    <h1>BIENVENIDO A NUESTRO SERVICIO DE ENTREGA A DOMICILIO</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html"><button onclick="toggleContent('inicio')">Inicio</button></a>
+      </li>
+		<li>
+        <a href="marcoteorico.html"><button>Marco Teórico</button></a>
+      
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('analisis-submenu')">Paradigmas de Análisis</button>
+        <ul id="analisis-submenu" class="submenu">
+          <li><a href="ciclo_vida_desarrollo.html">Ciclo de Vida de Desarrollo</a></li>
+          <li><a href="analisis_diseño.html">Análisis y Diseño Estructurado</a></li>
+          <li><a href="herramienta_modelado.html">Herramientas de Modelado</a></li>
+        </ul>
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('metodologias-submenu')">Metodología del Desarrollo</button>
+        <ul id="metodologias-submenu" class="submenu">
+          <li><a href="scrum.html">Scrum</a></li>
+        </ul>
+      </li>
+      <li>
+        <button onclick="toggleSubmenu('lenguaje-submenu')">Lenguaje Unificado de Modelo</button>
+        <ul id="lenguaje-submenu" class="submenu">
+          <li><a href="casos_de_uso.html">Casos de uso de Negocio y Sistema</a></li>
+          <li><a href="digrama_clases.html">Diagrama de Clases</a></li>
+        </ul>
+      </li>
+      
+    </ul>
+  </nav>
+
+  <main>
+   
+	  <div id="analisis-diseño-estructurado" class="content2" >
+		  <h2>Analisis y Diseño Estructurado</h2>
+		  <ul>
+<li><strong>Identificar los requisitos del sistema:</strong> En esta etapa, se realiza un análisis detallado de los requisitos del sistema de entrega. Esto implica identificar las necesidades de los usuarios, comprender los objetivos del sistema, definir los criterios de éxito y tener en cuenta cualquier restricción o limitación existente, como el presupuesto, los recursos disponibles o las regulaciones legales.</li>
+<p></p>
+<li><strong>Crear el Product Backlog:</strong> El Product Backlog es una lista priorizada de todas las funcionalidades, características y mejoras que se desean implementar en el sistema de entrega. Para crearlo, se pueden utilizar técnicas como entrevistas con los usuarios, análisis de casos de uso, estudios de mercado y revisión de documentación existente. Es importante que los elementos del Product Backlog sean claros, específicos, medibles y aporten valor al sistema y a los usuarios.</li>
+<p></p>
+<li><strong>Establecer el Equipo Scrum:</strong> Se forma un equipo Scrum multidisciplinario, que incluye roles como el Scrum Master, el Product Owner y los desarrolladores. Cada miembro del equipo tiene responsabilidades específicas y colabora de manera conjunta para alcanzar los objetivos del proyecto.</li>
+<p></p>
+<li><strong>Planificar los Sprints:</strong> Los sprints son iteraciones de tiempo fijo en las que se desarrollan incrementos del sistema de entrega. Durante la planificación del sprint, el equipo Scrum selecciona un conjunto de elementos del Product Backlog que se implementarán durante ese sprint. Se definen los objetivos y se establece el plan detallado para lograrlos, incluyendo las tareas específicas y las estimaciones de tiempo.</li>
+<p></p>
+<li><strong>Realizar el diseño estructurado:</strong> Con base en los elementos seleccionados para el sprint, se realiza un diseño estructurado del sistema de entrega. Esto implica definir la arquitectura del sistema, identificar los módulos principales, establecer las interfaces entre los componentes, diseñar la base de datos y cualquier otro aspecto técnico relevante. El diseño debe ser claro, modular y escalable, teniendo en cuenta los requisitos y las restricciones identificadas en la etapa de análisis.</li>
+<p></p>
+<li><strong>Desarrollar en incrementos:</strong> Durante el sprint, el equipo Scrum trabaja en la implementación de los elementos seleccionados del Product Backlog. El desarrollo se realiza de forma iterativa e incremental, con entregas parciales de funcionalidad al final de cada sprint. Es importante mantener una comunicación constante dentro del equipo y con los usuarios para resolver dudas, obtener retroalimentación y realizar ajustes si es necesario.</li>
+<p></p>
+<li><strong>Realizar pruebas y validaciones:</strong> A medida que se va desarrollando el sistema de entrega, se realizan pruebas y validaciones para asegurarse de que cumple con los requisitos establecidos. Esto puede incluir pruebas unitarias, pruebas de integración, pruebas de rendimiento y pruebas de aceptación por parte de los usuarios. Las pruebas se llevan a cabo de forma continua durante el sprint, y los resultados se utilizan para corregir errores y mejorar la calidad del sistema.</li>
+<p></p>
+<li><strong>Revisar y adaptar:</strong> Al final de cada sprint, se realiza una revisión del trabajo realizado. El equipo Scrum presenta los incrementos desarrollados y recibe retroalimentación de los usuarios y stakeholders. Esta retroalimentación se utiliza para evaluar el progreso del proyecto, realizar ajustes en el Product Backlog y planificar los siguientes sprints. También se lleva a cabo una retrospectiva, en la cual el equipo reflexiona sobre su desempeño y busca formas de mejorar su eficacia y eficiencia.</li>
+</ul>
+
+	  </div>
+  
+  </main>
+	
+  <footer>
+    <p>Derechos de autor &copy; 2023 </p>
+  </footer>
+</body>
+</html>
+
